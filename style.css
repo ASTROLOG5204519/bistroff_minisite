@@ -1,0 +1,258 @@
+:root {
+    --bg-color: #ffffff;
+    --bg-light: #f9f9f9;
+    --bg-dark: #1a1a1a;
+    --text-color: #333333;
+    --text-light: #666666;
+    --accent: #2c2c2c;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+    background-color: var(--bg-color);
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(5px);
+    z-index: 100;
+    border-bottom: 1px solid #eee;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-weight: 600;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    margin-left: 25px;
+    font-size: 0.95rem;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--text-light);
+}
+
+.btn-nav {
+    border: 1px solid var(--accent);
+    padding: 8px 16px;
+    border-radius: 4px;
+}
+
+/* Hero */
+.hero {
+    padding: 100px 0;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 300;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: var(--text-light);
+    margin-bottom: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Buttons */
+.btn-primary {
+    display: inline-block;
+    background-color: var(--accent);
+    color: var(--white);
+    text-decoration: none;
+    padding: 14px 32px;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: background 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #000;
+}
+
+/* Sections */
+.section {
+    padding: 80px 0;
+}
+
+.bg-light { background-color: var(--bg-light); }
+.bg-dark { background-color: var(--bg-dark); color: var(--white); }
+
+h2 {
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.text-large {
+    font-size: 1.3rem;
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 20px;
+    font-weight: 300;
+}
+
+.section p {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 20px;
+    color: var(--text-light);
+}
+
+.bg-dark p { color: #cccccc; }
+
+/* Pricing */
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.price-card {
+    background: var(--white);
+    padding: 40px 30px;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid #eee;
+    transition: transform 0.3s;
+}
+
+.price-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.price-card.featured {
+    border: 2px solid var(--accent);
+}
+
+.price-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.price {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+.price-card ul {
+    list-style: none;
+    text-align: left;
+    color: var(--text-light);
+}
+
+.price-card ul li {
+    margin-bottom: 12px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.price-card ul li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+}
+
+.note {
+    font-size: 0.9rem;
+    margin-top: 30px;
+    font-style: italic;
+}
+
+/* Locations */
+.location-list {
+    list-style: none;
+    max-width: 500px;
+    margin: 0 auto 30px;
+    text-align: left;
+}
+
+.location-list li {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+/* Contact & Footer */
+.text-center { text-align: center; }
+
+.social-link {
+    margin-top: 30px;
+    font-size: 1.1rem;
+}
+
+.social-link a {
+    color: var(--white);
+    text-decoration: underline;
+}
+
+footer {
+    padding: 30px 0;
+    background-color: #111;
+    color: #666;
+    font-size: 0.85rem;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+    
+    nav a {
+        margin: 0;
+    }
+    
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+}
